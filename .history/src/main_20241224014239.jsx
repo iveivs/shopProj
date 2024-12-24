@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { MainLayout } from './layouts/MainLayout'
-import "./assets/styles/index.scss"
+import 
 
 const router = createBrowserRouter([
   {
@@ -11,11 +11,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <div>Home</div>
-      },
-      {
-        path: "/pizzas",
-        element: <div>Pizzas</div>
-      },
+      }
     ]
   }
 ])
