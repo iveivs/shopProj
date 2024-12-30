@@ -1,0 +1,18 @@
+.clear {
+
+}
+.normal {
+    background: var(--button-bg-color);
+    transition: all 0.3s ease 0s;
+    &:hover {
+        background: var(--inverted-button-bg-color);
+    }
+}
+
+.active {
+
+}
+
+.border {
+    border-radius: ;
+}

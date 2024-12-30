@@ -1,0 +1,29 @@
+.header {
+    position: relative;
+    background-color: var(--light-bg);
+    flex-shrink: 0;
+}
+.container { 
+    max-width: var(--);
+    margin: 0 auto;
+}
+.content {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+svg {
+    color: #ff7010;
+}
+.buttons {
+    svg {
+        color: #ff7010;
+    }
+}

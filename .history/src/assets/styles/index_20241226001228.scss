@@ -1,0 +1,13 @@
+@import url("./reset.scss");
+@import url("./variables/global.scss");
+@import url("./themes/dark.scss");
+@import url("./themes/normal.scss");
+
+bod
+
+.app {
+    display: flex;
+    background: var(--primary-color);
+    flex-direction: column;
+    min-height: 100vh;
+}
