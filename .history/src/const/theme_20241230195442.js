@@ -1,0 +1,4 @@
+export Theme = {
+    LIGHT: '',
+    DARK: '',
+}

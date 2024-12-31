@@ -1,0 +1,4 @@
+const Icon = () => {
+}
+
+export { Icon }
