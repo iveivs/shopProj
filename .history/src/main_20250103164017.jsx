@@ -14,7 +14,7 @@ const router = createBrowserRouter([
         element: <MainLayout />,
         children: routerNavigations.map(({path, element}) => ({
                 path: path,
-                element: <Suspense fallback={<div>Loading...</div>}>{element}</Suspense>
+                element: <Suspense fallback={<div></div>}></Suspense>
             }
         ))
     },

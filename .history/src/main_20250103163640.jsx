@@ -5,18 +5,23 @@ import "./assets/styles/index.scss";
 import { ThemeProvider } from "./providers/ThemeProvider";
 import { Theme } from "./const/theme";
 import { Suspense } from "react";
-import { routerNavigations } from "./const/router";
 
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout />,
-        children: routerNavigations.map(({path, element}) => ({
-                path: path,
-                element: <Suspense fallback={<div>Loading...</div>}>{element}</Suspense>
-            }
-        ))
+        children: [
+            {
+                path: "/",
+                element: (
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <MainPage />
+                    </Suspense>
+                ),
+            },
+            
+        ],
     },
 ]);
 
