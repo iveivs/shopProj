@@ -1,0 +1,36 @@
+.card {
+    background: var(--light-bg);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+.img {
+
+}
+.body {
+    padding: 15px 20px;
+}
+.info {
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+}
+.title {
+
+}
+.text {
+
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    color: #fff;
+
+    span {
+        color: var(--primary-color);
+    }
+}
+.button {
+
+}

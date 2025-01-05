@@ -1,0 +1,14 @@
+.title {
+
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat();
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
