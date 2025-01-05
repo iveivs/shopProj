@@ -24,26 +24,23 @@ const ProductTape = (props) => {
         };
         switch (el.product) {
             case productsName.PIZZAS:
-                const minPricePizzas = calcMinPricePizzas(el.sizes, el.doughs);
+                const minPrice = calcMinPricePizzas(el.sizes, el.doughs);
 
                 return (
                     <CardItem
                         {...props}
                         ingredients={el.ingredients}
                         key={props.key}
-                        price={minPricePizzas}
+                        price={minPrice}
                     />
                 );
             case productsName.ROLLS:
-                const prices = el.pieces.map((el) => el.price);
-
-                const minPriceRolls = Math.min(...prices)
+                const pricez = el.pieces.map((el) => el.price);
                 return (
                     <CardItem
                         {...props}
                         ingredients={el.ingredients}
                         key={props.key}
-                        price = {minPriceRolls}
                     />
                 );
             case productsName.OTHERS:
@@ -52,7 +49,6 @@ const ProductTape = (props) => {
                         {...props}
                         key={props.key}
                         description={el.description}
-                        price = {el.prise}
                     />
                 );
 

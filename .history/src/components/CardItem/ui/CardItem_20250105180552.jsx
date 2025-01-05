@@ -33,8 +33,8 @@ const CardItem = (props) => {
                     <Button border className={cls.button}>
                         Выбрать
                     </Button>
+                    <span>от {price} Р</span>
                     
-                    {product === productsName.OTHERS ? <span>{price} P.</span> : <span> от {price} P.</span> }
                 </div>
             </div>
         </article>

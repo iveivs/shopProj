@@ -52,7 +52,7 @@ const ProductTape = (props) => {
                         {...props}
                         key={props.key}
                         description={el.description}
-                        price = {el.prise}
+                        price = 
                     />
                 );
 

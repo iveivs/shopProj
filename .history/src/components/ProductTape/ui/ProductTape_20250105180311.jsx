@@ -35,15 +35,15 @@ const ProductTape = (props) => {
                     />
                 );
             case productsName.ROLLS:
-                const prices = el.pieces.map((el) => el.price);
+                const pricez = el.pieces.map((el) => el.price);
 
-                const minPriceRolls = Math.min(...prices)
+                const minPriceRolls = Math.min(...min)
                 return (
                     <CardItem
                         {...props}
                         ingredients={el.ingredients}
                         key={props.key}
-                        price = {minPriceRolls}
+                        price = 
                     />
                 );
             case productsName.OTHERS:
@@ -52,7 +52,6 @@ const ProductTape = (props) => {
                         {...props}
                         key={props.key}
                         description={el.description}
-                        price = {el.prise}
                     />
                 );
 
