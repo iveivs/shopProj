@@ -1,0 +1,13 @@
+.link {
+    
+}
+.productBody {
+    
+}
+.title {
+    font: var(--f)
+}
+.content {
+    display: grid;grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
