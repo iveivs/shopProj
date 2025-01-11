@@ -1,0 +1,33 @@
+import { Header } from "@/components/Header";
+import cls from "./MainLayout.module.scss";
+import { Outlet } from "react-router-dom";
+import { useTheme } from "@/assets/hooks/useThem";
+import { Footer } from "@/components/Footer";
+import { Navbar } from "@/components/Navbar";
+import { ModalItem } from "@/components/ModalItem";
+import { useContext } from "react";
+import { LayoutContext } from "@/providers/LayoutContextProvider";
+
+const MainLayout = () => {
+    const { theme } = useTheme()
+
+    const {isOpen, setIs} = useContext(LayoutContext)
+    return (
+        <div id="app" className={`app ${theme}`}>
+            <Header  />
+
+            <main className={cls.main}>
+                <div className={cls.container}>
+                    <div className={cls.body}>
+                        <Navbar />
+                        <Outlet />
+                    </div>
+                </div>
+            </main>
+            <Footer />
+            <ModalItem />
+        </div>
+    );
+};
+
+export { MainLayout };
