@@ -4,12 +4,9 @@ import { ModalItemLayout } from "@/layouts/ModalItemLayout";
 import { productActions } from "@/redux/productItem/slice/productItemSlice";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { useModalItemParams } from "../../helper/useModalItemParams";
 
 const ModalItemOthers = (props) => {
     const { isOpen, product, price } = props;
-
-    const newParams = useModalItemParams()
 
     const dispatch = useDispatch();
 
@@ -28,9 +25,15 @@ const ModalItemOthers = (props) => {
         }
     }, [dispatch, isOpen, product]);    
 
-    
+    const newParams = {
+        id: product.id,
+        product: product.product,
+        img: product.photo,
+        title: product.name,
+        price: price,
+    };
 
-    return <ModalItemLayout price={price} params={newParams} />;
+    return <ModalItemLayout  params={newParams} />;
 };
 
 export { ModalItemOthers };

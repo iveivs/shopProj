@@ -14,7 +14,7 @@ import { useModalItemParams } from "../../helper/useModalItemParams";
 const ModalItemPizza = (props) => {
     const { isOpen, product, price } = props;
 
-    const newParams = useModalItemParams()
+    const newParams = useModalItemParams
 
     const dispatch = useDispatch();
 

@@ -42,7 +42,7 @@ const ModalItem = (props) => {
             height={680}
             border={25}
         >
-            <ModalItemSkeleton />
+            <ModalItemSkeleton
         </Modal>
         )
     }

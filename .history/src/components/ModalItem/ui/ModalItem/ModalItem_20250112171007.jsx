@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 import { ModalItemPizza } from "../ModalItemPizza/ModalItemPizza";
 import { ModalItemRolls } from "../ModalItemRolls/ModalItemRolls";
 import { ModalItemOthers } from "../ModalItemOthers/ModalItemOthers";
-import { ModalItemSkeleton } from "../ModalItemSkeleton/ModalItemSkeleton";
 
 const ModalItem = (props) => {
     const { isOpen, setIsOpen } = props;
@@ -34,17 +33,7 @@ const ModalItem = (props) => {
     }
 
     if(loading) {
-        return (
-            <Modal
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-            width={1070}
-            height={680}
-            border={25}
-        >
-            <ModalItemSkeleton />
-        </Modal>
-        )
+        
     }
 
     return (

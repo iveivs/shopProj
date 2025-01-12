@@ -12,7 +12,7 @@ import { useModalItemParams } from "../../helper/useModalItemParams";
 const ModalItemRolls = (props) => {
     const { isOpen, product, price } = props;
 
-    const newParams = useModalItemParams()
+    const newParams = useModalItemParams
 
     const dispatch = useDispatch();
 

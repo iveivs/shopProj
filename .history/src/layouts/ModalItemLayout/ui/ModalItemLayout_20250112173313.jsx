@@ -11,7 +11,7 @@ const ModalItemLayout = (props) => {
                 {options && options}
 
                 <div className={cls.footer}>
-                    <span className={cls.price}> Итого {price} руб.</span>
+                    <span className={cls.price}> Итого {params.price} руб.</span>
                     <Button border className={cls.button}>
                         Добавить
                     </Button>

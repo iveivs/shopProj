@@ -9,7 +9,7 @@ import { useModalItemParams } from "../../helper/useModalItemParams";
 const ModalItemOthers = (props) => {
     const { isOpen, product, price } = props;
 
-    const newParams = useModalItemParams()
+    const newParams = useModalItemParams
 
     const dispatch = useDispatch();
 
