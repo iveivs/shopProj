@@ -1,0 +1,8 @@
+.body {
+    display: flex;
+    gap: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 16px;
+}
