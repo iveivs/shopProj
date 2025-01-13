@@ -11,12 +11,11 @@ import { useContext, useState } from "react";
 import { BasketItem } from "@/components/BasketItem";
 import { useSelector } from "react-redux";
 import { getBasketTotalPrice } from "@/redux/basket/selectors/basketSelectors";
-import { LayoutContext } from "@/providers/LayoutContextProvider";
 
 const Header = () => {
     const navigate = useNavigate();
 
-    const {popup} =  useContext(LayoutContext)
+    useContext(lay)
 
     const [isOpen, setIsOpen] = useState(false);
     const handleClick = () => setIsOpen((prev) => !prev);
@@ -58,7 +57,6 @@ const Header = () => {
                             </Button>
                         </div>
                     </div>
-                    {popup && <p className={cls.popup}>Товар был добавлен в корзину</p>}
                 </div>
             </header>
 

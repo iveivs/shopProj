@@ -58,7 +58,7 @@ const Header = () => {
                             </Button>
                         </div>
                     </div>
-                    {popup && <p className={cls.popup}>Товар был добавлен в корзину</p>}
+                    {popup && <p>  Товар был добавлен в корзину</p>}
                 </div>
             </header>
 

@@ -6,18 +6,13 @@ const LayoutContextProvider = ({children}) => {
     const [isOpen, setIsOpen] = useState(false)
     const [popup, setPopup] = useState(false)
 
-    let timeOut = null
-
     const handleClick = () => setIsOpen((prev) => !prev)
 
     const openPopap = () => {
-        if(timeOut !== null) {
-            clearTimeout(timeOut)
-        }
         setPopup(true)
 
-        timeOut = setTimeout(() => {
-            setPopup(false)
+        setTimeout(() => {
+            setPopup()
         }, 3000)
     }
 
@@ -25,8 +20,6 @@ const LayoutContextProvider = ({children}) => {
         isOpen,
         handleClick,
         setIsOpen,
-        openPopap,
-        popup,
     }
 
     return < LayoutContext.Provider value={value}>

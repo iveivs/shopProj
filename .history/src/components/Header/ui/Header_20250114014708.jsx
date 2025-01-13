@@ -16,7 +16,7 @@ import { LayoutContext } from "@/providers/LayoutContextProvider";
 const Header = () => {
     const navigate = useNavigate();
 
-    const {popup} =  useContext(LayoutContext)
+    const popup =  useContext(LayoutContext)
 
     const [isOpen, setIsOpen] = useState(false);
     const handleClick = () => setIsOpen((prev) => !prev);
@@ -58,7 +58,6 @@ const Header = () => {
                             </Button>
                         </div>
                     </div>
-                    {popup && <p className={cls.popup}>Товар был добавлен в корзину</p>}
                 </div>
             </header>
 

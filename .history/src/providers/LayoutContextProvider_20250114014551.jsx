@@ -26,7 +26,6 @@ const LayoutContextProvider = ({children}) => {
         handleClick,
         setIsOpen,
         openPopap,
-        popup,
     }
 
     return < LayoutContext.Provider value={value}>

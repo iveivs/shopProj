@@ -14,7 +14,6 @@ const ModalItemLayout = (props) => {
     const onClick = () => {
         dispatch(basketActions.addItem({...params, price: price }))
         setIsOpen(false)
-        openPopap()
     }
     return (
         <div className={cls.body}>
