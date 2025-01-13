@@ -1,6 +1,5 @@
-import { calcTotalPrice } from '@/utils/calcTotalPrice'
 import { createSlice } from '@reduxjs/toolkit'
-
+import { calcTotalPrice } from "@/utils/calcTotalPrice";
 
 const initialState = {
     items: [],

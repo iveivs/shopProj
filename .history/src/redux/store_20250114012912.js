@@ -23,14 +23,12 @@ export const store = configureStore({
     rolls: rollsReducer,
     product: productReducer,
     others: othersReducer,
-    basket: persistedReducer,
+    basket: basketReducer,
     [rtkApi.reducerPath]: rtkApi.reducer,
   },
 
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: false,
-    }).concat(rtkApi.middleware)
+    getDefaultMiddleware().concat(rtkApi.middleware)
 })
 
-export const persistor = persistStore(store)
+export const persistor = persistStore(st)

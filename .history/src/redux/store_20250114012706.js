@@ -7,14 +7,13 @@ import { othersReducer } from './others/slice/othersSlice'
 import { productReducer } from './productItem/slice/productItemSlice'
 import { basketReducer } from './basket/slice/basketSlice'
 import storage from 'redux-persist/lib/storage'
-import { persistStore, persistReducer } from 'redux-persist'
 
 const persistConfig = {
   key: 'root',
   storage,
 }
 
-const persistedReducer = persistReducer(persistConfig, basketReducer )
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
   reducer: {
@@ -23,14 +22,10 @@ export const store = configureStore({
     rolls: rollsReducer,
     product: productReducer,
     others: othersReducer,
-    basket: persistedReducer,
+    basket: basketReducer,
     [rtkApi.reducerPath]: rtkApi.reducer,
   },
 
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: false,
-    }).concat(rtkApi.middleware)
+    getDefaultMiddleware().concat(rtkApi.middleware)
 })
-
-export const persistor = persistStore(store)

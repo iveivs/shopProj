@@ -71,7 +71,7 @@ const Header = () => {
 
                     <div className={cls.footer}>
                         <div className={cls.totalPrice}>
-                            <span>Итого: {totalPrice} Р</span>
+                            <span>Итого: {} Р</span>
                         </div>
 
                         <Button>Оформить заказ</Button>

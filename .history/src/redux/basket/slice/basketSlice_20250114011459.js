@@ -1,4 +1,3 @@
-import { calcTotalPrice } from '@/utils/calcTotalPrice'
 import { createSlice } from '@reduxjs/toolkit'
 
 

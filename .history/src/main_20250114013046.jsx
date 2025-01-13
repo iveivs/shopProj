@@ -8,9 +8,8 @@ import { Suspense } from "react";
 import { routerNavigations } from "./const/router";
 import { PageLoader } from "./ui/PageLoader";
 import { Provider } from "react-redux";
-import { persistor, store } from "./redux/store";
+import { store } from "./redux/store";
 import { LayoutContextProvider } from "./providers/LayoutContextProvider";
-import { PersistGate } from "redux-persist/integration/react";
 
 const router = createBrowserRouter([
     {

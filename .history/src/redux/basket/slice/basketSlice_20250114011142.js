@@ -1,6 +1,4 @@
-import { calcTotalPrice } from '@/utils/calcTotalPrice'
 import { createSlice } from '@reduxjs/toolkit'
-
 
 const initialState = {
     items: [],
@@ -17,29 +15,27 @@ export const basketSlice = createSlice({
             const item = state.items.find((res) => {
                 return JSON.stringify(res) === JSON.stringify(action.payload)
             })
-
-            if (item) {
+            
+            if(item) {
                 item.count++;
             } else {
                 state.items.push(action.payload)
             }
 
-            state.totalPrice = calcTotalPrice(state.items)
+            state.totalPrice = calcTo
         },
         minusItem(state, action) {
             const item = state.items.find((res) => {
                 return JSON.stringify(res) === JSON.stringify(action.payload)
             })
-
-            if (item.count > 1) {
+            
+            if(item.count > 1 ) {
                 item.count--;
             } else {
                 state.items = state.items.filter((res) => {
                     return JSON.stringify(res) !== JSON.stringify(action.payload)
                 })
             }
-
-            state.totalPrice = calcTotalPrice(state.items)
         }
     },
 })
